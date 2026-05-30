@@ -12,8 +12,8 @@ export default function UserCard({ user }) {
             margin: "10px"
         }}>
             <h3>{user.name}</h3>
-            <p>{user.email}</p>
-            <p>@{user.username}</p>
+            <p>Email: {user.email}</p>
+            <p>Username: @{user.username}</p>
             <button onClick={() => setLiked(!liked)}>{liked ? "❤️ Liked" : "🤍 Like"}</button>
             <button onClick={() => setFollowed(!followed)}>{followed ? "Following" : "Follow"}</button>
         </div>

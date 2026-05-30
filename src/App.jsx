@@ -3,6 +3,7 @@ import Userlist from "./components/Userlist"
 import Footer from "./components/Footer"
 import { useEffect, useState } from "react"
 import { UserContext } from "./components/UserContext"
+import "./App.css"
 
 function App() {
   const [users, setUsers] = useState([])
