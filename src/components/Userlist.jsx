@@ -8,7 +8,7 @@ export default function Userlist () {
     return (
         <>
         <div>
-            {user.map((user) => (
+            {users.map((user) => (
                 <UserCard key={user.id} user={user} />
             ))}
         </div>

@@ -5,7 +5,7 @@ import { useEffect, useState } from "react"
 import { UserContext } from "./components/UserContext"
 
 function App() {
-  const [user, setUsers] = useState([])
+  const [users, setUsers] = useState([])
   const [search, setSearch] = useState("")
 
   useEffect(() => {

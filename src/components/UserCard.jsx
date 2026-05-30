@@ -2,7 +2,7 @@ import { useState } from "react";
 
 export default function UserCard({ user }) {
     const [liked, setLiked] = useState(false)
-    const [follow, serFollowed] = useState(false)
+    const [followed, setFollowed] = useState(false)
 
     return (
         <>
