@@ -1,15 +1,30 @@
 import Navbar from "./components/Navbar"
-import UserCard from "./components/UserCard"
 import Userlist from "./components/Userlist"
 import Footer from "./components/Footer"
+import { useEffect, useState } from "react"
+import { UserContext } from "./components/UserContext"
 
 function App() {
+  const [user, setUsers] = useState([])
+  const [search, setSearch] = useState("")
+
+  useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/users")
+      .then((res) => res.json())
+      .then((data) => setUsers(data))
+  }, []);
+
+  const filteredUsers = users.filter((user) =>
+  user.name.toLowerCase().includes(search.toLowerCase()));
   return(
   <>
-  <Navbar></Navbar>
-  <UserCard></UserCard>
-  <Userlist></Userlist>
-  <Footer></Footer>
+  <UserContext.Provider value={{ users: filteredUsers }}>
+    <div>
+      <Navbar search={search} setSearch={setSearch}></Navbar>
+      <Userlist></Userlist>
+      <Footer></Footer>
+    </div>
+  </UserContext.Provider>
   </>
   )
 }
