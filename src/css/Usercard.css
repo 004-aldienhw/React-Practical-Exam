@@ -49,10 +49,11 @@
 .likedbtn,
 .likebtn {
     font-size: 1.5rem;
+    margin-right: 1rem;
     background: none;
     border: none;
-    margin-right: 1rem;
     cursor: pointer;
+    margin-bottom: 5px;
 }
 
 .followbtn,
@@ -75,4 +76,15 @@
     color: white;
     background: none;
     border: 2px solid white;
+}
+
+.info {
+    cursor: pointer;
+    color: darkgray;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    margin-top: 10px;
+    text-decoration: underline;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
