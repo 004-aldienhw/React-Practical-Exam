@@ -11,6 +11,11 @@
     color: white;
 }
 
+.buttons {
+    display: flex;
+    align-items: center;
+}
+
 @keyframes pop {
     0% {
         transform: scale(1);
@@ -55,13 +60,15 @@
     transition: all 0.3s ease;
     border: none;
     border-radius: 1rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding: 7px;
     cursor: pointer;
+    width: 6rem;
 }
 
 .followbtn {
     background: red;
+    border: 2px solid red;
 }
 
 .followingbtn {

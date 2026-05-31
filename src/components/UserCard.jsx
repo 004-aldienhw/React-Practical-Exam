@@ -11,9 +11,9 @@ export default function UserCard({ user }) {
         <div className="usercard">
             <img src={profileIcon} alt="UserIcon" width={70}/>
             <h3>{user.name}</h3>
+            <p>{user.username}</p>
             <p>{user.email}</p>
-            <p>@{user.username}</p>
-            <div>
+            <div className="buttons">
                 <button
                 className={`btn ${liked ? "pop likedbtn" : "likebtn"}`}
                 onClick={() => setLiked(!liked)}>{liked ? "❤️" : "🤍"}</button>

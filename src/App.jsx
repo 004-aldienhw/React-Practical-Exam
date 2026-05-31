@@ -18,15 +18,15 @@ function App() {
   const filteredUsers = users.filter((user) =>
   user.name.toLowerCase().includes(search.toLowerCase()));
   return(
-  <>
+  <div className="app">
   <UserContext.Provider value={{ users: filteredUsers, search }}>
-    <div>
-      <Navbar search={search} setSearch={setSearch}></Navbar>
+    <Navbar search={search} setSearch={setSearch}></Navbar>
+    <main className="content">
       <Userlist></Userlist>
-      <Footer></Footer>
-    </div>
+    </main>
+    <Footer></Footer>
   </UserContext.Provider>
-  </>
+  </div>
   )
 }
 
