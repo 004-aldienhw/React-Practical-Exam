@@ -8,7 +8,7 @@ export default function Navbar({search, setSearch}) {
     return (
         <>
         <nav>
-            <h1>Social Media</h1>
+            <h1 className="socialmedia">Redz</h1>
             
             <div>
             <input
@@ -25,7 +25,7 @@ export default function Navbar({search, setSearch}) {
             }}>Clear</button>
             </div>
 
-            <img src={profileIcon} alt="" width={"70px"}/>
+            <img className="navprofile" src={profileIcon} alt="UserIcon" width={70}/>
         </nav>
         </>
     )

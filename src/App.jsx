@@ -19,7 +19,7 @@ function App() {
   user.name.toLowerCase().includes(search.toLowerCase()));
   return(
   <>
-  <UserContext.Provider value={{ users: filteredUsers }}>
+  <UserContext.Provider value={{ users: filteredUsers, search }}>
     <div>
       <Navbar search={search} setSearch={setSearch}></Navbar>
       <Userlist></Userlist>

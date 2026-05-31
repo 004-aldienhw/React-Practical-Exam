@@ -1,4 +1,6 @@
 import { useState } from "react";
+import "../css/Usercard.css"
+import profileIcon from "../assets/download-removebg-preview.png"
 
 export default function UserCard({ user }) {
     const [liked, setLiked] = useState(false)
@@ -6,16 +8,19 @@ export default function UserCard({ user }) {
 
     return (
         <>
-        <div style={{
-            border: "1px solid gray",
-            padding: "10px",
-            margin: "10px"
-        }}>
+        <div className="usercard">
+            <img src={profileIcon} alt="UserIcon" width={70}/>
             <h3>{user.name}</h3>
-            <p>Email: {user.email}</p>
-            <p>Username: @{user.username}</p>
-            <button onClick={() => setLiked(!liked)}>{liked ? "❤️ Liked" : "🤍 Like"}</button>
-            <button onClick={() => setFollowed(!followed)}>{followed ? "Following" : "Follow"}</button>
+            <p>{user.email}</p>
+            <p>@{user.username}</p>
+            <div>
+                <button
+                className={`btn ${liked ? "pop likedbtn" : "likebtn"}`}
+                onClick={() => setLiked(!liked)}>{liked ? "❤️" : "🤍"}</button>
+                <button
+                className={followed ? "followingbtn" : "followbtn"}
+            onClick={() => setFollowed(!followed)}>{followed ? "Following" : "Follow +"}</button>
+            </div>
         </div>
         </>
     )
